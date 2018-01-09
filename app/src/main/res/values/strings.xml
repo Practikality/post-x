@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PostX</string>
+    <string name="bg_color">Background Color</string>
+    <string name="text_color">Text Color</string>
+    <string name="text_family">Text Style</string>
+    <string name="text_alignment">Text Alignment</string>
+    <string name="white">White</string>
+    <string name="black">Black</string>
+    <string name="sansser">Sans Serif</string>
+    <string name="casual">Monospace</string>
+    <string name="capcond">Serif</string>
+    <string name="maintext">Your text</string>
+    <string name="enterurl">Background url</string>
+    <string name="bottomtext">Bottom text</string>
+    <string name="generate">Generate Post</string>
+    <string name="middletexthint">Text in the middle</string>
+    <string name="urltexthint">Enter an image url</string>
+    <string name="bottomtexthint">Text in the bottom right</string>
+    <string name="leftalign">Left</string>
+    <string name="centeralign">Center</string>
+    <string name="rightalign">Right</string>
+    <string name="fontsize">Font Size (Default 22)</string>
+    <string name="update">Update</string>
+    <string name="share">Share Post</string>
+    <string name="fb_app_id">534723036889189</string>
+</resources>
