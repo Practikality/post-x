@@ -11,58 +11,29 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     String bgcolor,textcolor,textstyle,textalign,maintext,bottomtext;
-
+    int r = 0, g = 0, b = 0, r2 = 255, g2 = 255, b2 = 255;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         bgcolor = "";
-        textcolor = "";
+        textcolor = "notfilled";
         textstyle = "";
         textalign = "";
         maintext = "";
         bottomtext = "";
+        textColor(); //respond to text color changes in real time
+        bgchange(); //respond to bg color changes in real time
     }
-    public void darkgreen(View view){
-        bgcolor = "#1abc9c";
-        bgchange(bgcolor);
-    }
-    public void lightgreen(View view){
-        bgcolor = "#2ecc71";
-        bgchange(bgcolor);
-    }
-    public void blue(View view){
-        bgcolor = "#3498db";
-        bgchange(bgcolor);
-    }
-    public void purple(View view){
-        bgcolor = "#9b59b6";
-        bgchange(bgcolor);
-    }
-    public void almostblack(View view){
-        bgcolor = "#34495e";
-        bgchange(bgcolor);
-    }
-    public void orange(View view){
-        bgcolor = "#f39c12";
-        bgchange(bgcolor);
-    }
-    public void red(View view){
-        bgcolor = "#e74c3c";
-        bgchange(bgcolor);
-    }
-    public void white(View view){
-        bgcolor = "#ecf0f1";
-        bgchange(bgcolor);
-    }
+
     public void generate(View view){
-        textcolor = textColor();
         if(!textcolor.equals("notfilled")){
             textstyle = textStyle();
             if(!textcolor.equals("notfilled")){
@@ -90,17 +61,58 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    private String textColor(){
-        RadioButton r1 = (RadioButton) findViewById(R.id.textcolor_white);
-        RadioButton r2 = (RadioButton) findViewById(R.id.textcolor_black);
-        if(r1.isChecked()){
-            return "#ffffff";
-        }else if(r2.isChecked()){
-            return "#000000";
-        }else{
-            makeToast("Please make a selection for text color");
-            return "notfilled";
-        }
+    private void textColor(){
+        SeekBar red = (SeekBar) findViewById(R.id.text_color_red);
+        SeekBar green = (SeekBar) findViewById(R.id.text_color_green);
+        SeekBar blue = (SeekBar) findViewById(R.id.text_color_blue);
+        red.setMax(255);
+        red.setProgress(r);
+        green.setMax(255);
+        green.setProgress(g);
+        blue.setMax(255);
+        blue.setProgress(b);
+        final TextView heading = (TextView) findViewById(R.id.bgchange);
+
+        red.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
+                r = i;
+                heading.setTextColor(Color.rgb(r,g,b));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+        green.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
+                g = i;
+                heading.setTextColor(Color.rgb(r,g,b));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+        blue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
+                b = i;
+                heading.setTextColor(Color.rgb(r,g,b));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+        textcolor = r + "textcodenew" + g + "textcodenew" + b;
     }
     private String textStyle(){
         RadioButton r1 = (RadioButton) findViewById(R.id.family_casual);
@@ -117,9 +129,58 @@ public class MainActivity extends AppCompatActivity {
             return "notfilled";
         }
     }
-    public void bgchange(String colorcode){
-        TextView tv = (TextView) findViewById(R.id.bgchange);
-        tv.setBackgroundColor(Color.parseColor(colorcode));
+    public void bgchange(){
+        SeekBar red = (SeekBar) findViewById(R.id.bg_color_red);
+        SeekBar green = (SeekBar) findViewById(R.id.bg_color_green);
+        SeekBar blue = (SeekBar) findViewById(R.id.bg_color_blue);
+        red.setMax(255);
+        red.setProgress(r2);
+        green.setMax(255);
+        green.setProgress(g2);
+        blue.setMax(255);
+        blue.setProgress(b2);
+        final TextView heading = (TextView) findViewById(R.id.bgchange);
+
+        red.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
+                r2 = i;
+                heading.setBackgroundColor(Color.rgb(r2,g2,b2));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+        green.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
+                g2 = i;
+                heading.setBackgroundColor(Color.rgb(r2,g2,b2));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+        blue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
+                b2 = i;
+                heading.setBackgroundColor(Color.rgb(r2,g2,b2));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) { }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+        bgcolor = r + "textcodenew" + g + "textcodenew" + b;
     }
     private String textAlign(){
         RadioButton r1 = (RadioButton) findViewById(R.id.align_left);

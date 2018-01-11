@@ -43,7 +43,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class GeneratePost extends FragmentActivity {
-    String bgcolor, textcolor, textstyle, textalign, maintext, bottomtext;
+    String textstyle, textalign, maintext, bottomtext;
     ShareDialog shareDialog;
     CallbackManager callbackManager;
     String image_path;
@@ -58,22 +58,22 @@ public class GeneratePost extends FragmentActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         SharedPreferences sharedPreferences = getSharedPreferences("postx", Context.MODE_PRIVATE);
         String[] details = sharedPreferences.getString("env_details", "").split(" ");
-        bgcolor = details[0];
-        textcolor = details[1];
+        String[] bgcolor = details[0].split("textcodenew");
+        String[] textcolor = details[1].split("textcodenew");
         textstyle = details[2];
         textalign = details[3];
         maintext = sharedPreferences.getString("maintext", "not found");
-        bottomtext = sharedPreferences.getString("bottomrighttext", "not found");
+        bottomtext = "~ " + sharedPreferences.getString("bottomrighttext", "not found");
         TextView tv1 = (TextView) findViewById(R.id.tofillwithmaintext);
         TextView tv2 = (TextView) findViewById(R.id.tofillwithbottomrightext);
         TextView tv3 = (TextView) findViewById(R.id.tofillwithbottomtoptext);
         tv1.setText(maintext);
-        tv2.setText("~ " + bottomtext);
+        tv2.setText(bottomtext);
         RelativeLayout linearLayout = (RelativeLayout) findViewById(R.id.mainpostbody);
-        linearLayout.setBackgroundColor(Color.parseColor(bgcolor));
-        tv1.setTextColor(Color.parseColor(textcolor));
-        tv2.setTextColor(Color.parseColor(textcolor));
-        tv3.setTextColor(Color.parseColor(textcolor));
+        linearLayout.setBackgroundColor(Color.rgb(Integer.parseInt(bgcolor[0]),Integer.parseInt(bgcolor[1]),Integer.parseInt(bgcolor[2])));
+        tv1.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
+        tv2.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
+        tv3.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
         if (textstyle.equals("casual")) {
             tv1.setTypeface(Typeface.MONOSPACE, Typeface.NORMAL);
         } else if (textstyle.equals("condensed")) {
@@ -117,8 +117,10 @@ public class GeneratePost extends FragmentActivity {
             stream.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            System.out.println("File not found error");
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("IO Exception error");
         }
         File imagePath = new File(getApplicationContext().getCacheDir(), "images");
         File newFile = new File(imagePath, "image.png");
@@ -127,7 +129,7 @@ public class GeneratePost extends FragmentActivity {
 
         if (contentUri != null) {
             Date dt = Calendar.getInstance().getTime();
-            MediaStore.Images.Media.insertImage(getContentResolver(),bitmap,dt.toString(),"Post x by Practikality");
+            MediaStore.Images.Media.insertImage(getContentResolver(),bitmap,dt.toString(),"Post X by Practikality");
             Intent shareIntent = new Intent();
             shareIntent.setAction(Intent.ACTION_SEND);
             shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); // temp permission for receiving app to read this file

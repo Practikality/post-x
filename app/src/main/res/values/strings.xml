@@ -23,4 +23,7 @@
     <string name="update">Update</string>
     <string name="share">Share Post</string>
     <string name="fb_app_id">534723036889189</string>
+    <string name="red">Red:</string>
+    <string name="green">Green:</string>
+    <string name="blue">Blue:</string>
 </resources>
