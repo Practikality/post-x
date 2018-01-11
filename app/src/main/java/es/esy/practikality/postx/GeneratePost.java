@@ -43,7 +43,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class GeneratePost extends FragmentActivity {
-    String textstyle, textalign, maintext, bottomtext;
+    private String textstyle, textalign, maintext, bottomtext;
     ShareDialog shareDialog;
     CallbackManager callbackManager;
     String image_path;
@@ -73,7 +73,6 @@ public class GeneratePost extends FragmentActivity {
         linearLayout.setBackgroundColor(Color.rgb(Integer.parseInt(bgcolor[0]),Integer.parseInt(bgcolor[1]),Integer.parseInt(bgcolor[2])));
         tv1.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
         tv2.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
-        tv3.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
         if (textstyle.equals("casual")) {
             tv1.setTypeface(Typeface.MONOSPACE, Typeface.NORMAL);
         } else if (textstyle.equals("condensed")) {
@@ -162,5 +161,7 @@ public class GeneratePost extends FragmentActivity {
                     break;
             }
     }
-
+    private void makeToast(String message){
+        Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+    }
 }

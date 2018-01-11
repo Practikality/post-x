@@ -16,8 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    String bgcolor,textcolor,textstyle,textalign,maintext,bottomtext;
-    int r = 0, g = 0, b = 0, r2 = 255, g2 = 255, b2 = 255;
+    private String bgcolor,textcolor,textstyle,textalign,maintext,bottomtext;
+    private int r = 0, g = 0, b = 0, r2 = 255, g2 = 255, b2 = 255;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,41 +78,43 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
                 r = i;
                 heading.setTextColor(Color.rgb(r,g,b));
+                textcolor = r + "textcodenew" + g + "textcodenew" + b;
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) { }
+            public void onStartTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Starts");}
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Stops");}
         });
         green.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
                 g = i;
                 heading.setTextColor(Color.rgb(r,g,b));
+                textcolor = r + "textcodenew" + g + "textcodenew" + b;
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) { }
+            public void onStartTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Starts");}
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Stops");}
         });
         blue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
                 b = i;
                 heading.setTextColor(Color.rgb(r,g,b));
+                textcolor = r + "textcodenew" + g + "textcodenew" + b;
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) { }
+            public void onStartTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Starts");}
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Stops");}
         });
-        textcolor = r + "textcodenew" + g + "textcodenew" + b;
     }
     private String textStyle(){
         RadioButton r1 = (RadioButton) findViewById(R.id.family_casual);
@@ -146,41 +148,43 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
                 r2 = i;
                 heading.setBackgroundColor(Color.rgb(r2,g2,b2));
+                bgcolor = r2 + "textcodenew" + g2 + "textcodenew" + b2;
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) { }
+            public void onStartTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Starts");}
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Stops");}
         });
         green.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
                 g2 = i;
                 heading.setBackgroundColor(Color.rgb(r2,g2,b2));
+                bgcolor = r2 + "textcodenew" + g2 + "textcodenew" + b2;
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) { }
+            public void onStartTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Starts");}
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Stops");}
         });
         blue.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean boo) {
                 b2 = i;
                 heading.setBackgroundColor(Color.rgb(r2,g2,b2));
+                bgcolor = r2 + "textcodenew" + g2 + "textcodenew" + b2;
             }
 
             @Override
-            public void onStartTrackingTouch(SeekBar seekBar) { }
+            public void onStartTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Starts");}
 
             @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {}
+            public void onStopTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Stops");}
         });
-        bgcolor = r + "textcodenew" + g + "textcodenew" + b;
     }
     private String textAlign(){
         RadioButton r1 = (RadioButton) findViewById(R.id.align_left);
