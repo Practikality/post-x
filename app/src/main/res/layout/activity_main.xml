@@ -63,10 +63,10 @@
                         android:textColor="@color/colorAccent" />
 
                     <SeekBar
+                        android:id="@+id/bg_color_red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:thumbTint="#e74c3c"
-                        android:id="@+id/bg_color_red"/>
+                        android:thumbTint="#e74c3c" />
                 </LinearLayout>
 
                 <LinearLayout

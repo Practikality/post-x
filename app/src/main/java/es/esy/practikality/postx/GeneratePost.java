@@ -68,7 +68,6 @@ public class GeneratePost extends FragmentActivity {
         bottomtext = "~ " + sharedPreferences.getString("bottomrighttext", "not found");
         TextView tv1 = (TextView) findViewById(R.id.tofillwithmaintext);
         TextView tv2 = (TextView) findViewById(R.id.tofillwithbottomrightext);
-        TextView tv3 = (TextView) findViewById(R.id.tofillwithbottomtoptext);
         tv1.setText(maintext);
         tv2.setText(bottomtext);
         RelativeLayout linearLayout = (RelativeLayout) findViewById(R.id.mainpostbody);

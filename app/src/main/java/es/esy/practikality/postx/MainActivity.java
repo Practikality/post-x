@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -126,27 +127,41 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         });
     }
     private void textStyle(String spinnerselection){
+        TextView tv1 = (TextView) findViewById(R.id.bgchange);
+        Typeface custom_font;
         switch (spinnerselection){
             case "Sans Serif":
                 textstyle = "sans_serif";
+                tv1.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
                 break;
             case "Monospace":
                 textstyle = "monospace";
+                tv1.setTypeface(Typeface.MONOSPACE, Typeface.NORMAL);
                 break;
             case "Caviar Dreams":
                 textstyle = "caviar_dreams";
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
+                tv1.setTypeface(custom_font);
                 break;
             case "Coolvetica":
                 textstyle = "coolvetica";
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/coolvetica.ttf");
+                tv1.setTypeface(custom_font);
                 break;
             case "Helvetica":
                 textstyle = "helvetica";
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/HelveticaNeue.ttf");
+                tv1.setTypeface(custom_font);
                 break;
             case "Oswald":
                 textstyle = "oswald";
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
+                tv1.setTypeface(custom_font);
                 break;
             case "Raleway":
                 textstyle = "raleway";
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/Raleway-Regular.ttf");
+                tv1.setTypeface(custom_font);
                 break;
             default:
                 textstyle = "notfilled";
