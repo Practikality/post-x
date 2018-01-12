@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        bgcolor = "";
-        textcolor = "notfilled";
+        bgcolor = r2 + "textcodenew" + g2 + "textcodenew" + b2;
+        textcolor = r + "textcodenew" + g + "textcodenew" + b;
         textstyle = "notfilled";
         textalign = "";
         maintext = "";

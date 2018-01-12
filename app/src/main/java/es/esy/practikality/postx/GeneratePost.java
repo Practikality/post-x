@@ -45,7 +45,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class GeneratePost extends FragmentActivity {
-    private String textalign, maintext, bottomtext;
     ShareDialog shareDialog;
     CallbackManager callbackManager;
     String image_path;
@@ -56,16 +55,15 @@ public class GeneratePost extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generate_post);
         Mybackground = (ImageView) findViewById(R.id.Mybackground);
-
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         SharedPreferences sharedPreferences = getSharedPreferences("postx", Context.MODE_PRIVATE);
         String[] details = sharedPreferences.getString("env_details", "").split(" ");
         String[] bgcolor = details[0].split("textcodenew");
         String[] textcolor = details[1].split("textcodenew");
         String textstyle = details[2];
-        textalign = details[3];
-        maintext = sharedPreferences.getString("maintext", "not found");
-        bottomtext = "~ " + sharedPreferences.getString("bottomrighttext", "not found");
+        String textalign = details[3];
+        String maintext = sharedPreferences.getString("maintext", "not found");
+        String bottomtext = "~ " + sharedPreferences.getString("bottomrighttext", "not found");
         TextView tv1 = (TextView) findViewById(R.id.tofillwithmaintext);
         TextView tv2 = (TextView) findViewById(R.id.tofillwithbottomrightext);
         tv1.setText(maintext);
@@ -130,7 +128,6 @@ public class GeneratePost extends FragmentActivity {
         RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.mainpostbody);
         relativeLayout.setDrawingCacheEnabled(true);
         relativeLayout.buildDrawingCache(true);
-
         Bitmap bitmap = Bitmap.createBitmap(relativeLayout.getDrawingCache());
         relativeLayout.setDrawingCacheEnabled(true);
         Toast.makeText(getApplicationContext(), "Just making those finishing touches", Toast.LENGTH_SHORT).show();
@@ -164,6 +161,7 @@ public class GeneratePost extends FragmentActivity {
             shareIntent.putExtra(Intent.EXTRA_TEXT, "Shared with #PostXbyPractikality");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Shared with #PostXbyPractikality");
             startActivity(Intent.createChooser(shareIntent, "Choose an app"));
+            finish();
         }
     }
     public void Gallery(View view) {
