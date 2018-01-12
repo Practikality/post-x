@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -36,6 +37,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.lang.reflect.Type;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
@@ -43,7 +45,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class GeneratePost extends FragmentActivity {
-    private String textstyle, textalign, maintext, bottomtext;
+    private String textalign, maintext, bottomtext;
     ShareDialog shareDialog;
     CallbackManager callbackManager;
     String image_path;
@@ -60,7 +62,7 @@ public class GeneratePost extends FragmentActivity {
         String[] details = sharedPreferences.getString("env_details", "").split(" ");
         String[] bgcolor = details[0].split("textcodenew");
         String[] textcolor = details[1].split("textcodenew");
-        textstyle = details[2];
+        String textstyle = details[2];
         textalign = details[3];
         maintext = sharedPreferences.getString("maintext", "not found");
         bottomtext = "~ " + sharedPreferences.getString("bottomrighttext", "not found");
@@ -73,13 +75,39 @@ public class GeneratePost extends FragmentActivity {
         linearLayout.setBackgroundColor(Color.rgb(Integer.parseInt(bgcolor[0]),Integer.parseInt(bgcolor[1]),Integer.parseInt(bgcolor[2])));
         tv1.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
         tv2.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
-        if (textstyle.equals("casual")) {
-            tv1.setTypeface(Typeface.MONOSPACE, Typeface.NORMAL);
-        } else if (textstyle.equals("condensed")) {
-            tv1.setTypeface(Typeface.SERIF, Typeface.NORMAL);
-        } else if (textstyle.equals("sansserif")) {
-            tv1.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
+
+        //set custom fonts
+        Typeface custom_font;
+        switch (textstyle){
+            case "monospace":
+                tv1.setTypeface(Typeface.MONOSPACE, Typeface.NORMAL);
+                break;
+            case "caviar_dreams":
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/CaviarDreams.ttf");
+                tv1.setTypeface(custom_font);
+                break;
+            case "coolvetica":
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/coolvetica.ttf");
+                tv1.setTypeface(custom_font);
+                break;
+            case "helvetica":
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/HelveticaNeue.ttf");
+                tv1.setTypeface(custom_font);
+                break;
+            case "oswald":
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/Oswald-Regular.ttf");
+                tv1.setTypeface(custom_font);
+                break;
+            case "raleway":
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/Raleway-Regular.ttf");
+                tv1.setTypeface(custom_font);
+                break;
+            case "sans_serif":
+            default:
+                tv1.setTypeface(Typeface.SANS_SERIF, Typeface.NORMAL);
         }
+
+        //set text alignment
         if (textalign.equals("right")) {
             tv1.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
         } else if (textalign.equals("center")) {

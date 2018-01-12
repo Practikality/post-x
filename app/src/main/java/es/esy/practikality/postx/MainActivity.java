@@ -8,14 +8,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     private String bgcolor,textcolor,textstyle,textalign,maintext,bottomtext;
     private int r = 0, g = 0, b = 0, r2 = 255, g2 = 255, b2 = 255;
     @Override
@@ -25,18 +28,24 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         bgcolor = "";
         textcolor = "notfilled";
-        textstyle = "";
+        textstyle = "notfilled";
         textalign = "";
         maintext = "";
         bottomtext = "";
         textColor(); //respond to text color changes in real time
         bgchange(); //respond to bg color changes in real time
+
+        //populate spinner with font choice
+        Spinner font_choices_spinner = (Spinner) findViewById(R.id.spinner_text_font);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.font_options, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        font_choices_spinner.setAdapter(adapter);
+        font_choices_spinner.setOnItemSelectedListener(this);
     }
 
     public void generate(View view){
         if(!textcolor.equals("notfilled")){
-            textstyle = textStyle();
-            if(!textcolor.equals("notfilled")){
+            if(!textstyle.equals("notfilled")){
                 textalign = textAlign();
                 if(!bgcolor.equals("")) {
                     EditText et1 = (EditText) findViewById(R.id.maintext);
@@ -116,19 +125,31 @@ public class MainActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) { System.out.println("Tracking Stops");}
         });
     }
-    private String textStyle(){
-        RadioButton r1 = (RadioButton) findViewById(R.id.family_casual);
-        RadioButton r2 = (RadioButton) findViewById(R.id.family_condensed);
-        RadioButton r3 = (RadioButton) findViewById(R.id.family_sansserif);
-        if(r1.isChecked()){
-            return "casual";
-        }else if(r2.isChecked()){
-            return "condensed";
-        }else if(r3.isChecked()) {
-            return "sansserif";
-        }else {
-            makeToast("Please make a selection for text style");
-            return "notfilled";
+    private void textStyle(String spinnerselection){
+        switch (spinnerselection){
+            case "Sans Serif":
+                textstyle = "sans_serif";
+                break;
+            case "Monospace":
+                textstyle = "monospace";
+                break;
+            case "Caviar Dreams":
+                textstyle = "caviar_dreams";
+                break;
+            case "Coolvetica":
+                textstyle = "coolvetica";
+                break;
+            case "Helvetica":
+                textstyle = "helvetica";
+                break;
+            case "Oswald":
+                textstyle = "oswald";
+                break;
+            case "Raleway":
+                textstyle = "raleway";
+                break;
+            default:
+                textstyle = "notfilled";
         }
     }
     public void bgchange(){
@@ -201,6 +222,16 @@ public class MainActivity extends AppCompatActivity {
             return "notfilled";
         }
     }
+
+    //Respond to font selections
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        textStyle(parent.getItemAtPosition(pos).toString());
+    }
+
+    public void onNothingSelected(AdapterView<?> parent) {
+        // Another interface callback
+    }
+
     private void makeToast(String message){
         Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
     }

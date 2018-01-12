@@ -26,4 +26,13 @@
     <string name="red">Red:</string>
     <string name="green">Green:</string>
     <string name="blue">Blue:</string>
+    <string-array name="font_options">
+        <item>Sans Serif</item>
+        <item>Monospace</item>
+        <item>Caviar Dreams</item>
+        <item>Coolvetica</item>
+        <item>Helvetica</item>
+        <item>Oswald</item>
+        <item>Raleway</item>
+    </string-array>
 </resources>
