@@ -33,6 +33,8 @@ public class LoadTemplates extends AppCompatActivity {
         final Animation revrotate = AnimationUtils.loadAnimation(LoadTemplates.this,R.anim.revrotate);
         final Animation show = AnimationUtils.loadAnimation(LoadTemplates.this,R.anim.showicons);
         final Animation hide = AnimationUtils.loadAnimation(LoadTemplates.this,R.anim.hideicons);
+         tweetLay.setVisibility(View.GONE);
+         textLay.setVisibility(View.GONE);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
