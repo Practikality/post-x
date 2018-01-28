@@ -26,6 +26,9 @@
     <string name="red">Red:</string>
     <string name="green">Green:</string>
     <string name="blue">Blue:</string>
+    <string name="twitter_post">Twitter Post</string>
+    <string name="text_post">Text Post</string>
+    <string name="postx_temp_logo">PostX\'s temporary logo for load_templates screen</string>
     <string-array name="font_options">
         <item>Sans Serif</item>
         <item>Monospace</item>
