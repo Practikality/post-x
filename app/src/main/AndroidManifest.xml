@@ -34,15 +34,19 @@
             android:name=".SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".GeneratePost"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".LoadTemplates"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".LoadTemplates"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

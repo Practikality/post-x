@@ -5,4 +5,4 @@ PostX is the latest development by Practikality Inc. It is a novel post generato
 ![PostX-Banner](https://github.com/Practikality/post-x/blob/master/bannerPOstx.png)
 
 ## Screenshots
-<img src="https://github.com/Practikality/post-x/blob/master/Screen1.jpeg" alt="Shot1" height="320"> <img src="https://github.com/Practikality/post-x/blob/master/Screen2.jpeg" alt="Shot2" height="320"> <img src="https://github.com/Practikality/post-x/blob/master/Screen3.jpeg" alt="Shot3" height="320"> <img src="https://github.com/Practikality/post-x/blob/master/Screen4.jpeg" alt="Shot4" height="320">
+<img src="https://github.com/Practikality/post-x/blob/master/Screen1.jpeg" alt="Shot1" height="320"> <img src="https://github.com/Practikality/post-x/blob/master/Screen2.png" alt="Shot2" height="320"> <img src="https://github.com/Practikality/post-x/blob/master/Screen3.png" alt="Shot3" height="320"> <img src="https://github.com/Practikality/post-x/blob/master/Screen4.png" alt="Shot4" height="320">
