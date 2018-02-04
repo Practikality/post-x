@@ -1,95 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2eb1ff"
     tools:context="es.esy.practikality.postx.LoadTemplates">
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton3"
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/logo7"
+        android:contentDescription="@string/postx_temp_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:clickable="true"
-        app:backgroundTint="#00dafd"
-        app:fabSize="normal"
-        app:srcCompat="@drawable/ic_add_white_24dp" android:focusable="true" />
-
-
-    <LinearLayout
-        android:id="@+id/tweet"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="80dp"
-        android:layout_marginEnd="25dp"
-        tools:ignore="InvalidId">
-        <TextView
-            android:id="@+id/tx"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Twitter Post"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            android:textSize="18dp"
-           />
+        android:layout_height="match_parent"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp">
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/twitter"
+            android:id="@+id/floatingActionButton_options"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:clickable="true"
-            app:backgroundTint="#f1c40f"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/twittericon"
-             android:focusable="true"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/stext"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginBottom="125dp"
-        android:layout_marginEnd="25dp">
-        <TextView
-            android:id="@+id/textpost"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Text Post"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="5dp"
-            android:textSize="18dp"
-            />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
             android:clickable="true"
             android:focusable="true"
-            app:backgroundTint="#f1c40f"
-            app:fabSize="mini"
-            app:srcCompat="@drawable/ic_textsms_white_24dp" />
+            app:backgroundTint="#000000"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_add_white_24dp" />
+        <LinearLayout
+            android:id="@+id/linlayout_twitter_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal"
+            tools:ignore="InvalidId">
+            <TextView
+                android:id="@+id/tx"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/twitter_post"
+                android:textSize="18sp" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/twitter_floating_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:onClick="create_twitter_post"
+                android:focusable="true"
+                app:backgroundTint="#f1c40f"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/twittericon"
+               />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linlayout_text_post"
 
-
-
-    </LinearLayout>
-
-
-
-</android.support.design.widget.CoordinatorLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="125dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textpost"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/text_post"
+                android:textSize="18sp" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/text_floating_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="create_text_post"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:backgroundTint="#f1c40f"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_textsms_white_24dp" />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
 
 

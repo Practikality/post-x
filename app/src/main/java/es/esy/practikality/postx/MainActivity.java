@@ -42,6 +42,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         font_choices_spinner.setAdapter(adapter);
         font_choices_spinner.setOnItemSelectedListener(this);
+
+    }
+
+    //override back to go to LoadTemplates.class
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, LoadTemplates.class));
     }
 
     public void generate(View view){
