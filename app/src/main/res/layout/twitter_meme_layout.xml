@@ -7,7 +7,7 @@
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp">
 
@@ -35,20 +35,38 @@
             android:layout_marginLeft="9dp"
             android:layout_marginTop="142dp"/>
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/transparent"
-            android:ems="10"
-            android:fontFamily="assets/fonts/HelveticaNeue.ttf"
-            android:inputType="textPersonName"
-            android:selectAllOnFocus="false"
-            android:text="Name"
-            android:textSize="10dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="43dp"
-            android:layout_marginTop="130dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="130dp"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="assets/fonts/HelveticaNeue.ttf"
+                android:inputType="textPersonName"
+                android:selectAllOnFocus="false"
+                android:text="Name"
+                android:textSize="10dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginTop="130dp"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="assets/fonts/HelveticaNeue.ttf"
+                android:inputType="textEmailAddress"
+                android:selectAllOnFocus="false"
+                android:text=" @username"
+                android:textColor="@color/com_facebook_device_auth_text"
+                android:textSize="10dp" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editText2"
@@ -63,21 +81,6 @@
             android:textSize="9dp"
             android:layout_marginLeft="43dp"
             android:layout_marginTop="143dp" />
-
-        <EditText
-            android:id="@+id/editText3"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:backgroundTint="@android:color/transparent"
-            android:ems="10"
-            android:fontFamily="assets/fonts/HelveticaNeue.ttf"
-            android:inputType="textPersonName"
-            android:selectAllOnFocus="false"
-            android:text="username"
-            android:textColor="@color/com_facebook_device_auth_text"
-            android:textSize="10dp"
-            android:layout_marginLeft="119dp"
-            android:layout_marginTop="130dp" />
 
         <EditText
             android:id="@+id/editText4"
@@ -162,7 +165,48 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <TextView
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="53dp"
+                android:layout_weight="1"
+                android:background="#42A5F5"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="Gallery"
+                android:paddingEnd="45dp"
+                android:paddingStart="45dp"
+                android:text="Choose Image"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="53dp"
+                android:layout_weight="1"
+                android:background="#42A5F5"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="Gallery"
+                android:paddingEnd="30dp"
+                android:paddingStart="30dp"
+                android:text="Choose Profile Picture"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -173,6 +217,6 @@
         android:textColor="#000000"
         android:textSize="26sp"
         android:textStyle="bold"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="10dp" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
