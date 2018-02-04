@@ -66,14 +66,12 @@ public class GeneratePost extends FragmentActivity {
         String bottomtext = "~ " + sharedPreferences.getString("bottomrighttext", "not found");
         TextView tv1 = (TextView) findViewById(R.id.tofillwithmaintext);
         TextView tv2 = (TextView) findViewById(R.id.tofillwithbottomrightext);
-        TextView tv3 = (TextView) findViewById(R.id.tofillwithbottomtoptext);
         tv1.setText(maintext);
         tv2.setText(bottomtext);
         RelativeLayout linearLayout = (RelativeLayout) findViewById(R.id.mainpostbody);
         linearLayout.setBackgroundColor(Color.rgb(Integer.parseInt(bgcolor[0]),Integer.parseInt(bgcolor[1]),Integer.parseInt(bgcolor[2])));
         tv1.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
         tv2.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
-        tv3.setTextColor(Color.rgb(Integer.parseInt(textcolor[0]),Integer.parseInt(textcolor[1]),Integer.parseInt(textcolor[2])));
 
         //set custom fonts
         Typeface custom_font;

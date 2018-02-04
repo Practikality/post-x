@@ -1,9 +1,8 @@
 package es.esy.practikality.postx;
 
-import android.content.Intent;
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -11,7 +10,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class LoadTemplates extends AppCompatActivity {
 
@@ -26,9 +24,11 @@ public class LoadTemplates extends AppCompatActivity {
         TextView textp = (TextView) findViewById(R.id.textpost);
         textp.setTypeface(kul);
 
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton_options);
-        final LinearLayout tweetLay = (LinearLayout) findViewById(R.id.linlayout_twitter_post) ;
-        final LinearLayout textLay = (LinearLayout) findViewById(R.id.linlayout_text_post) ;
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingActionButton3);
+        final FloatingActionButton tweet = (FloatingActionButton) findViewById(R.id.twitter);
+        FloatingActionButton text = (FloatingActionButton) findViewById(R.id.text);
+        final LinearLayout tweetLay = (LinearLayout) findViewById(R.id.tweet) ;
+        final LinearLayout textLay = (LinearLayout) findViewById(R.id.stext) ;
         final Animation rotate = AnimationUtils.loadAnimation(LoadTemplates.this,R.anim.rotate);
         final Animation revrotate = AnimationUtils.loadAnimation(LoadTemplates.this,R.anim.revrotate);
         final Animation show = AnimationUtils.loadAnimation(LoadTemplates.this,R.anim.showicons);
@@ -44,6 +44,8 @@ public class LoadTemplates extends AppCompatActivity {
                     fab.startAnimation(revrotate);
                     tweetLay.startAnimation(hide);
                     textLay.startAnimation(hide);
+
+
                 }
                 else
                 {
@@ -52,25 +54,11 @@ public class LoadTemplates extends AppCompatActivity {
                     fab.startAnimation(rotate);
                     tweetLay.startAnimation(show);
                     textLay.startAnimation(show);
+
+
                 }
+
             }
         });
     }
-    //override back to make user select a post type
-    @Override
-    public void onBackPressed() {
-        makeToast("Select a post type to create a post");
-    }
-    public void create_twitter_post(View view) {
-        startActivity(new Intent(this, TwitterMeme.class));
-        finish();
-    }
-    public void create_text_post(View view){
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
-    }
-    private void makeToast(String message){
-        Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
-    }
 }
-
