@@ -92,7 +92,8 @@
                 android:focusable="true"
                 app:backgroundTint="#f1c40f"
                 app:fabSize="mini"
-                app:srcCompat="@drawable/ic_textsms_white_24dp" />
+                app:srcCompat="@drawable/ic_textsms_white_24dp"
+                android:onClick="create_text_post"/>
         </LinearLayout>
     </android.support.design.widget.CoordinatorLayout>
 </RelativeLayout>
