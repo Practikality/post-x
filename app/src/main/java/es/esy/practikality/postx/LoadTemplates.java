@@ -61,6 +61,11 @@ public class LoadTemplates extends AppCompatActivity {
     public void onBackPressed() {
         makeToast("Select a post type to create a post");
     }
+
+    public void create_twitter_post(View view) {
+        startActivity(new Intent(this, TwitterMeme.class));
+        finish();
+    }
     public void create_text_post(View view){
         startActivity(new Intent(this, MainActivity.class));
         finish();
@@ -69,3 +74,4 @@ public class LoadTemplates extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
     }
 }
+
