@@ -40,6 +40,12 @@
         <activity
             android:name=".GeneratePost"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".TwitterMeme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TwitterActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".LoadTemplates"
             android:screenOrientation="portrait">
             <intent-filter>

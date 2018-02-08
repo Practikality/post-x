@@ -42,7 +42,8 @@
             android:layout_marginBottom="80dp"
             android:layout_marginEnd="25dp"
             android:orientation="horizontal"
-            tools:ignore="InvalidId">
+            tools:ignore="InvalidId"
+            android:onClick="create_twitter_post">
             <TextView
                 android:id="@+id/tx"
                 style="@style/TextAppearance.AppCompat.Title"

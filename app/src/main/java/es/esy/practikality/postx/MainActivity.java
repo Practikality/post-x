@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         editor.apply();
                         Intent intent = new Intent(MainActivity.this, GeneratePost.class);
                         startActivity(intent);
-
                     } else {
                         makeToast("Enter valid texts to add");
                     }
