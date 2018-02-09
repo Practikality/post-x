@@ -17,12 +17,12 @@
         android:fontFamily="sans-serif-condensed"
         android:textSize="26sp"
         android:textColor="#000000"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
     <EditText
         android:layout_width="160dp"
         android:layout_height="50dp"
         android:gravity="center"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="20dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
@@ -39,7 +39,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
         android:text="@string/update"
         android:background="#0D47A1"
@@ -53,7 +53,7 @@
         android:orientation="vertical"
         android:layout_below="@id/dp"
         android:background="#ffffff"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="20dp">
         <RelativeLayout
             android:id="@+id/twitter_post_relative_layout"
             android:layout_width="match_parent"
@@ -62,6 +62,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_picture_of_tweet"
+                android:clickable="true"
+                android:onClick="add_profile_image"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_alignParentStart="true"
@@ -72,9 +74,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
-                android:layout_toRightOf="@id/profile_picture_of_tweet"
+                android:layout_toEndOf="@id/profile_picture_of_tweet"
                 android:layout_marginStart="6dp"
-                android:backgroundTint="@color/transparent"
                 android:text="Blake"
                 android:textColor="#000"
                 android:textSize="16sp" />
@@ -96,7 +97,6 @@
                 android:layout_toEndOf="@id/profile_picture_of_tweet"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="7dp"
-                android:backgroundTint="@color/transparent"
                 android:ems="10"
                 android:fontFamily="sans-serif-condensed"
                 android:hint="Text"
@@ -109,7 +109,6 @@
                 android:layout_below="@id/caption"
                 android:layout_toEndOf="@id/profile_picture_of_tweet"
                 android:layout_marginStart="5dp"
-                android:backgroundTint="@color/transparent"
                 android:ems="10"
                 android:fontFamily="sans-serif"
                 android:hint="Text"
@@ -120,30 +119,39 @@
                 android:layout_height="20dp"
                 android:layout_alignParentEnd="true"
                 android:src="@drawable/twitter_follow_btn"/>
+            <ImageView
+                android:id="@+id/tweet_image"
+                android:layout_width="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="75dp"/>
         </RelativeLayout>
         <ImageView
             android:layout_width="120dp"
+            android:contentDescription="twitter post icons"
             android:layout_height="22dp"
-            android:layout_below="@id/twitter_post_relative_layout"
             android:layout_marginStart="80dp"
             android:layout_marginBottom="10dp"
             android:src="@drawable/twitter_post_icons"/>
     </LinearLayout>
     <Button
         android:layout_centerHorizontal="true"
-        android:onClick="Gallery"
+        android:onClick="add_tweet_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:text="Choose Profile Picture"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="ADD IMAGE TO TWEET"
         android:layout_above="@id/share_twitter_post"
         android:background="#42A5F5"
         android:textAllCaps="false"
         android:textColor="#fff"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
         android:fontFamily="sans-serif-condensed"
         android:textStyle="bold"
-        android:paddingStart="40dp"
-        android:paddingEnd="40dp"
         android:textSize="18sp" />
     <Button
         android:layout_centerHorizontal="true"
@@ -154,7 +162,7 @@
         android:paddingStart="50dp"
         android:paddingEnd="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="15dp"
         android:text="@string/share"
         android:background="#0D47A1"
         android:textColor="#ffffff"

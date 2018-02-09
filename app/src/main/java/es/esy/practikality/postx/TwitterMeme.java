@@ -36,10 +36,10 @@ public class TwitterMeme extends AppCompatActivity {
         EditText fullname = (EditText)findViewById(R.id.bottom_right_text);
         EditText caption = (EditText) findViewById(R.id.caption_text);
         EditText hashtags = (EditText) findViewById(R.id.hashtags);
-        String user_name = username.getText().toString();
-        String full_name = fullname.getText().toString();
-        String caption_post = caption.getText().toString();
-        String hashtags_post = hashtags.getText().toString();
+        String user_name = username.getText().toString().trim();
+        String full_name = fullname.getText().toString().trim();
+        String caption_post = caption.getText().toString().trim();
+        String hashtags_post = hashtags.getText().toString().trim();
         SharedPreferences sharedPreferences = getSharedPreferences("postx", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("username",user_name);
@@ -51,5 +51,12 @@ public class TwitterMeme extends AppCompatActivity {
         editor.apply();
         Intent intent = new Intent(TwitterMeme.this, TwitterActivity.class);
         startActivity(intent);
+        finish();
     }
+    //override back to go to LoadTemplates.class
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, LoadTemplates.class));
+    }
+
 }

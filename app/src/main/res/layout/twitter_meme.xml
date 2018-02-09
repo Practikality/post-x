@@ -44,7 +44,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:backgroundTint="@color/transparent"
-            android:hint=" @username"
+            android:hint="username"
             android:singleLine="true"
             android:maxLength="15"
             android:inputType="textEmailAddress"

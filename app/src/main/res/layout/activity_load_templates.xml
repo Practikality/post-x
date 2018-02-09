@@ -35,6 +35,37 @@
             app:fabSize="normal"
             app:srcCompat="@drawable/ic_add_white_24dp" />
         <LinearLayout
+            android:id="@+id/linlayout_dank_irfan"
+            android:onClick="create_dank_irfan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="170dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/irfanpost"
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Dank Irfan"
+                android:textSize="18sp" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/irfan_floating_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:backgroundTint="#f1c40f"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_textsms_white_24dp"
+                android:onClick="create_dank_irfan"/>
+        </LinearLayout>
+        <LinearLayout
             android:id="@+id/linlayout_twitter_post"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,6 +89,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginBottom="10dp"
+                android:onClick="create_twitter_post"
                 android:layout_marginEnd="5dp"
                 android:clickable="true"
                 android:focusable="true"

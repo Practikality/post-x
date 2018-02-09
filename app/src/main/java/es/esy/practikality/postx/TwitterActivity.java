@@ -39,14 +39,17 @@ public class TwitterActivity extends AppCompatActivity {
     //private static int xyz = 1;
     //private static int yyy = 1;
     private static final int PICK_FROM_GALLERY = 2;
-    ImageView Mybackground;
-
+    ImageView profilePicture;
+    ImageView tweetImage;
+    boolean profile_picture_clicked;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twitter_template);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        Mybackground = (ImageView) findViewById(R.id.profile_picture_of_tweet);
+        profilePicture = (ImageView) findViewById(R.id.profile_picture_of_tweet);
+        tweetImage = (ImageView) findViewById(R.id.tweet_image);
+        profile_picture_clicked = false;
         Typeface helvetica = Typeface.createFromAsset(getAssets(), "fonts/HelveticaNeue.ttf");
         Typeface stilu_Regular = Typeface.createFromAsset(getAssets(), "fonts/stilu-Regular.otf");
         Typeface stilu_Light = Typeface.createFromAsset(getAssets(), "fonts/stilu-Light.otf");
@@ -72,6 +75,7 @@ public class TwitterActivity extends AppCompatActivity {
             }
             hashtags_text_view.setText(final_hashtags);
         }
+        makeToast("Click on profile icon to set an image.");
     }
     public void adjustSize(View view) {
         TextView tv1 = (TextView) findViewById(R.id.caption);
@@ -82,7 +86,7 @@ public class TwitterActivity extends AppCompatActivity {
             tv1.setTextSize(font);
         }
     }
-    public void Gallery(View view) {
+    public void Gallery() {
         Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
         photoPickerIntent.setType("image/*");
         startActivityForResult(photoPickerIntent, PICK_FROM_GALLERY);
@@ -97,21 +101,33 @@ public class TwitterActivity extends AppCompatActivity {
                     Uri selectedImage = data.getData();
                     try {
                         Bitmap bitmap = MediaStore.Images.Media.getBitmap(getApplicationContext().getContentResolver(), selectedImage);
-                        Mybackground.setImageBitmap(bitmap);
+                        if(profile_picture_clicked){
+                            profilePicture.setImageBitmap(bitmap);
+                        }else{
+                            tweetImage.setImageBitmap(bitmap);
+                            tweetImage.setVisibility(View.VISIBLE);
+                        }
                     } catch (IOException e) {
                         Log.i("TAG", "Some exception " + e);
                     }
                     break;
             }
     }
-
+    public void add_profile_image(View view){
+        profile_picture_clicked = true;
+        Gallery();
+    }
+    public void add_tweet_image(View view){
+        profile_picture_clicked = false;
+        Gallery();
+    }
     public void share(View view) {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.tweet_body);
         linearLayout.setDrawingCacheEnabled(true);
         linearLayout.buildDrawingCache(true);
         Bitmap bitmap = Bitmap.createBitmap(linearLayout.getDrawingCache());
         linearLayout.setDrawingCacheEnabled(true);
-        Toast.makeText(getApplicationContext(), "Just making those finishing touches", Toast.LENGTH_SHORT).show();
+        makeToast("Just making those finishing touches");
 
         try {
             File cachePath = new File(getApplicationContext().getCacheDir(), "images");
@@ -144,5 +160,8 @@ public class TwitterActivity extends AppCompatActivity {
             startActivity(Intent.createChooser(shareIntent, "Choose an app"));
             finish();
         }
+    }
+    private void makeToast(String message){
+        Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
     }
 }
