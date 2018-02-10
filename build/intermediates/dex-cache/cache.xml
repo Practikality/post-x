@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/padamchopra/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/689b5f596e04f1776b0e111d88ef2cec/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a37fc31c5ceeaa4532a37358add1b189d8db4af1">
+        <dex dex="/home/padamchopra/Documents/PractikalityGit/post-x/app/build/intermediates/transforms/preDex/release/29.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/padamchopra/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/96ff962e310e5e6821f336d9f14aca58/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="/home/padamchopra/Documents/PractikalityGit/post-x/app/build/intermediates/transforms/preDex/release/31.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/padamchopra/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/2269eec2c21e5fc28ed32aaf27c7bf84/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="26.0.2"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="/home/padamchopra/Documents/PractikalityGit/post-x/app/build/intermediates/transforms/preDex/release/30.jar" />
+    </item>
+
+</items>
