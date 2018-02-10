@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="es.esy.practikality.postx.GeneratePost">
+    tools:context="es.esy.practikality.post_x.GeneratePost">
         <TextView
                 android:layout_width="match_parent"
                 android:textAlignment="center"

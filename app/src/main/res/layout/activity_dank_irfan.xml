@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="es.esy.practikality.postx.DankIrfan">
+    tools:context="es.esy.practikality.post_x.DankIrfan">
     <TextView
         android:id="@+id/postx_dank_irfan"
         android:layout_width="match_parent"
@@ -36,6 +36,7 @@
             android:textColor="#fff"
             android:textAlignment="center"
             android:textSize="30sp"
+            android:cursorVisible="false"
             android:textStyle="bold"
             android:layout_height="wrap_content"
             android:hint="Enter Text"
@@ -43,6 +44,7 @@
             android:layout_alignParentTop="true"
             android:layout_margin="10dp" />
         <EditText
+            android:cursorVisible="false"
             android:background="#00000000"
             android:visibility="gone"
             android:id="@+id/irfan_text_bottom"
@@ -57,6 +59,7 @@
             android:textSize="30sp"
             android:textStyle="bold" />
         <EditText
+            android:cursorVisible="false"
             android:visibility="gone"
             android:background="#00000000"
             android:id="@+id/irfan_myboy_top_text"
@@ -72,6 +75,7 @@
             android:textSize="15sp"
             android:textStyle="bold" />
         <EditText
+            android:cursorVisible="false"
             android:visibility="gone"
             android:background="#00000000"
             android:id="@+id/irfan_myboy_bottom_text"

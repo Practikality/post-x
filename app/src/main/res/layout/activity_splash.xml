@@ -7,7 +7,7 @@
     android:layout_marginRight="-10dp"
     android:layout_marginBottom="-10dp"
     android:background="@drawable/splash_bg"
-    tools:context="es.esy.practikality.postx.SplashActivity">
+    tools:context="es.esy.practikality.post_x.SplashActivity">
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

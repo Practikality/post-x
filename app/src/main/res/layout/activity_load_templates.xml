@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2eb1ff"
-    tools:context="es.esy.practikality.postx.LoadTemplates">
+    tools:context="es.esy.practikality.post_x.LoadTemplates">
     <ImageView
         android:layout_width="250dp"
         android:layout_height="250dp"
@@ -48,8 +48,7 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
                 android:text="Dank Irfan"
                 android:textSize="18sp" />
             <android.support.design.widget.FloatingActionButton
@@ -60,7 +59,7 @@
                 android:layout_marginEnd="5dp"
                 android:clickable="true"
                 android:focusable="true"
-                app:backgroundTint="#f1c40f"
+                app:backgroundTint="#000"
                 app:fabSize="mini"
                 app:srcCompat="@drawable/ic_textsms_white_24dp"
                 android:onClick="create_dank_irfan"/>
@@ -76,12 +75,11 @@
             tools:ignore="InvalidId"
             android:onClick="create_twitter_post">
             <TextView
-                android:id="@+id/tx"
+                android:id="@+id/twitter_post"
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
                 android:text="@string/twitter_post"
                 android:textSize="18sp" />
             <android.support.design.widget.FloatingActionButton
@@ -93,7 +91,7 @@
                 android:layout_marginEnd="5dp"
                 android:clickable="true"
                 android:focusable="true"
-                app:backgroundTint="#f1c40f"
+                app:backgroundTint="#000"
                 app:fabSize="mini"
                 app:srcCompat="@drawable/twittericon" />
         </LinearLayout>
@@ -111,8 +109,8 @@
                 style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="0dp"
                 android:text="@string/text_post"
                 android:textSize="18sp" />
             <android.support.design.widget.FloatingActionButton
@@ -123,7 +121,7 @@
                 android:layout_marginEnd="5dp"
                 android:clickable="true"
                 android:focusable="true"
-                app:backgroundTint="#f1c40f"
+                app:backgroundTint="#000"
                 app:fabSize="mini"
                 app:srcCompat="@drawable/ic_textsms_white_24dp"
                 android:onClick="create_text_post"/>

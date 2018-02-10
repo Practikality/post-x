@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="es.esy.practikality.postx">
+    package="es.esy.practikality.post_x">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme">
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="es.esy.practikality.postx"
+            android:authorities="es.esy.practikality.post_x"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -24,30 +24,30 @@
         </provider>
 
         <activity
-            android:name=".MainActivity"
+            android:name="es.esy.practikality.post_x.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SplashActivity"
+            android:name="es.esy.practikality.post_x.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".GeneratePost"
+            android:name="es.esy.practikality.post_x.GeneratePost"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TwitterMeme"
+            android:name="es.esy.practikality.post_x.TwitterMeme"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TwitterActivity"
+            android:name="es.esy.practikality.post_x.TwitterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LoadTemplates"
+            android:name="es.esy.practikality.post_x.LoadTemplates"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,8 +55,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DankIrfan"
-            android:screenOrientation="portrait"></activity>
+        <activity android:name="es.esy.practikality.post_x.DankIrfan"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
