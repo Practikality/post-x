@@ -137,7 +137,7 @@ public class TwitterActivity extends AppCompatActivity {
         File imagePath = new File(getApplicationContext().getCacheDir(), "images");
         File newFile = new File(imagePath, "image.png");
 
-        Uri contentUri = FileProvider.getUriForFile(getApplicationContext(), "es.esy.practikality.postx", newFile);
+        Uri contentUri = FileProvider.getUriForFile(this, "es.esy.practikality.post_x", newFile);
 
         if (contentUri != null) {
             Date dt = Calendar.getInstance().getTime();

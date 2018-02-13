@@ -26,7 +26,10 @@
         android:layout_below="@id/postx_dank_irfan"
         android:id="@+id/irfan_meme_body">
         <ImageView
+            android:contentDescription="Irfan meme base image"
             android:id="@+id/irfan_image_view"
+            android:background="@drawable/irfan_charlie"
+            android:adjustViewBounds="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <EditText

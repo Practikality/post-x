@@ -69,7 +69,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#e74c3c" />
+                        android:thumbTint="#e74c3c"
+                        android:maxHeight="10dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -77,7 +78,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingEnd="20dp"
-                    android:paddingStart="20dp">
+                    android:paddingStart="20dp"
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="60dp"
@@ -91,7 +93,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#2ecc71" />
+                        android:thumbTint="#2ecc71"
+                        android:maxHeight="10dp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -99,7 +102,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingEnd="20dp"
-                    android:paddingStart="20dp">
+                    android:paddingStart="20dp"
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="60dp"
@@ -113,7 +117,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#3498db" />
+                        android:thumbTint="#3498db"
+                        android:maxHeight="10dp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -152,13 +157,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#e74c3c" />
+                        android:thumbTint="#e74c3c"
+                        android:maxHeight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="60dp"
@@ -172,13 +179,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#2ecc71" />
+                        android:thumbTint="#2ecc71"
+                        android:maxHeight="10dp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="60dp"
@@ -192,7 +201,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#3498db" />
+                        android:thumbTint="#3498db"
+                        android:maxHeight="10dp" />
                 </LinearLayout>
             </LinearLayout>
 

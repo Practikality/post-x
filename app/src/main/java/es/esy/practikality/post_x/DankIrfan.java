@@ -63,6 +63,7 @@ public class DankIrfan extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, LoadTemplates.class));
+        finish();
     }
 
     public void change_image(View view){
@@ -135,7 +136,7 @@ public class DankIrfan extends AppCompatActivity {
         File imagePath = new File(getApplicationContext().getCacheDir(), "images");
         File newFile = new File(imagePath, "image.png");
 
-        Uri contentUri = FileProvider.getUriForFile(getApplicationContext(), "es.esy.practikality.postx", newFile);
+        Uri contentUri = FileProvider.getUriForFile(this, "es.esy.practikality.post_x", newFile);
 
         if (contentUri != null) {
             Date dt = Calendar.getInstance().getTime();
@@ -148,7 +149,6 @@ public class DankIrfan extends AppCompatActivity {
             shareIntent.putExtra(Intent.EXTRA_TEXT, "Shared with #PostXbyPractikality");
             shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Shared with #PostXbyPractikality");
             startActivity(Intent.createChooser(shareIntent, "Choose an app"));
-            finish();
         }
     }
 

@@ -21,9 +21,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.facebook.CallbackManager;
-import com.facebook.share.widget.ShareDialog;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -32,9 +29,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class GeneratePost extends FragmentActivity {
-    ShareDialog shareDialog;
-    CallbackManager callbackManager;
-    String image_path;
     private static final int PICK_FROM_GALLERY = 2;
     ImageView Mybackground;
     @Override
@@ -137,7 +131,7 @@ public class GeneratePost extends FragmentActivity {
         File imagePath = new File(getApplicationContext().getCacheDir(), "images");
         File newFile = new File(imagePath, "image.png");
 
-        Uri contentUri = FileProvider.getUriForFile(getApplicationContext(), "es.esy.practikality.postx", newFile);
+        Uri contentUri = FileProvider.getUriForFile(this, "es.esy.practikality.post_x", newFile);
 
         if (contentUri != null) {
             Date dt = Calendar.getInstance().getTime();
