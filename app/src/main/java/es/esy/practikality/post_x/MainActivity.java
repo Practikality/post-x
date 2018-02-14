@@ -168,6 +168,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 custom_font = Typeface.createFromAsset(getAssets(), "fonts/Raleway-Regular.ttf");
                 tv1.setTypeface(custom_font);
                 break;
+            case "Honey Script":
+                textstyle = "honey_script";
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/HoneyScript-SemiBold.ttf");
+                tv1.setTypeface(custom_font);
+                break;
+            case "Vaguely Repulsive":
+                textstyle = "vaguely_repulsive";
+                custom_font = Typeface.createFromAsset(getAssets(), "fonts/vaguelyrepulsive.ttf");
+                tv1.setTypeface(custom_font);
+                break;
             default:
                 textstyle = "notfilled";
         }

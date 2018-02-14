@@ -9,8 +9,8 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo6"
-        android:roundIcon="@drawable/logo6"
         android:label="@string/app_name"
+        android:roundIcon="@drawable/logo6"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <provider
@@ -24,30 +24,30 @@
         </provider>
 
         <activity
-            android:name="es.esy.practikality.post_x.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="es.esy.practikality.post_x.SplashActivity"
+            android:name=".SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="es.esy.practikality.post_x.GeneratePost"
+            android:name=".GeneratePost"
             android:screenOrientation="portrait" />
         <activity
-            android:name="es.esy.practikality.post_x.TwitterMeme"
+            android:name=".TwitterMeme"
             android:screenOrientation="portrait" />
         <activity
-            android:name="es.esy.practikality.post_x.TwitterActivity"
+            android:name=".TwitterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="es.esy.practikality.post_x.LoadTemplates"
+            android:name=".LoadTemplates"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,8 +55,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="es.esy.practikality.post_x.DankIrfan"
+        <activity
+            android:name=".DankIrfan"
             android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

@@ -3,13 +3,11 @@
     <item>
         <shape>
             <size
-                android:height="10dp"
-                android:width="10dp" />
+                android:height="16dp"
+                android:width="16dp" />
             <solid android:color="@color/transparent" />
         </shape>
     </item>
-    <item android:drawable="@drawable/scrubber_control_normal_holo"
-        android:height="10dp"
-        android:width="10dp"/>
+    <item android:drawable="@drawable/scrubber_control_normal_holo1" />
 
 </layer-list>

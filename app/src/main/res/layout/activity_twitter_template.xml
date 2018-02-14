@@ -63,6 +63,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_picture_of_tweet"
                 android:clickable="true"
+                android:scaleType="centerCrop"
                 android:onClick="add_profile_image"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -76,7 +77,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:layout_toEndOf="@id/profile_picture_of_tweet"
                 android:layout_marginStart="6dp"
-                android:text="Blake"
+                android:text="Name"
                 android:textColor="#000"
                 android:textSize="16sp" />
             <TextView
@@ -99,7 +100,6 @@
                 android:layout_marginTop="7dp"
                 android:ems="10"
                 android:fontFamily="sans-serif-condensed"
-                android:hint="Text"
                 android:textColor="#000"
                 android:textSize="16sp"/>
             <TextView
@@ -111,7 +111,6 @@
                 android:layout_marginStart="5dp"
                 android:ems="10"
                 android:fontFamily="sans-serif"
-                android:hint="Text"
                 android:textColor="#43a6f5"
                 android:textSize="16sp"/>
             <ImageView

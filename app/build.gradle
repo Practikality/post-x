@@ -7,8 +7,8 @@ android {
         applicationId "es.esy.practikality.post_x"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 4
-        versionName "2.4"
+        versionCode 5
+        versionName "2.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -20,6 +20,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'
     compile 'com.android.support:design:26.1.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
@@ -30,3 +31,5 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.2.0'
 
 }
+
+apply plugin: 'com.google.gms.google-services'
