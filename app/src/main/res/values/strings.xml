@@ -15,7 +15,7 @@
     <string name="generate">Generate Post</string>
     <string name="middletexthint">Text in the middle</string>
     <string name="urltexthint">Enter an image url</string>
-    <string name="bottomtexthint">Text in the bottom right</string>
+    <string name="bottomtexthint">Text in the bottom right (optional)</string>
     <string name="leftalign">Left</string>
     <string name="centeralign">Center</string>
     <string name="rightalign">Right</string>
@@ -29,6 +29,26 @@
     <string name="twitter_post">Twitter Post</string>
     <string name="text_post">Text Post</string>
     <string name="postx_temp_logo">PostX\'s temporary logo for load_templates screen</string>
+    <string name="spaced_app_name">P O S T X</string>
+    <string name="dank_irfan_meme_base_image">dank irfan meme\'s base image</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="switch_dank_irfan_base_image">SWITCH IRFAN IMAGE</string>
+    <string name="text_post_background_image">Text post\'s background image</string>
+    <string name="choose_background_image">Choose Background Image</string>
+    <string name="dank_irfan">Dank Irfan</string>
+    <string name="splash_screen_logo">Practikality\'s splash screen logo</string>
+    <string name="tweet_default_font">Font Size (Default 16)</string>
+    <string name="name">Name</string>
+    <string name="tweet_verified_blue_tick">twitter blue tick for verified account</string>
+    <string name="username">Username</string>
+    <string name="caption">Caption</string>
+    <string name="tweet_follow_button">twitter follow button</string>
+    <string name="tweet_optional_image">Optional image to add to tweet</string>
+    <string name="tweet_post_icons">tweet icons at bottom of post</string>
+    <string name="tweet_add_image">ADD IMAGE TO TWEET</string>
+    <string name="hashtags_seperated">Hashtags (seprated by space)</string>
+    <string name="hashtags_if_any">Hashtags (if any)</string>
+    <string name="generate_twitter_post">GENERATE TWITTER POST</string>
     <string-array name="font_options">
         <item>Sans Serif</item>
         <item>Raleway</item>

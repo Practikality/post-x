@@ -7,15 +7,14 @@
     tools:context="es.esy.practikality.post_x.MainActivity">
 
     <TextView
-        android:id="@+id/bgchange"
+        android:id="@+id/postx_text_post_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:fontFamily="sans-serif-condensed"
-        android:text="@string/app_name"
+        android:text="@string/spaced_app_name"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="26sp"
@@ -34,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="sans-serif-condensed"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/bg_color"
@@ -62,63 +61,63 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:text="@string/red"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/red" />
 
                     <SeekBar
                         android:id="@+id/bg_color_red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#e74c3c"
-                        android:maxHeight="10dp"/>
+                        android:maxHeight="10dp"
+                        android:thumb="@drawable/custom_thumb_for_color_seekbar"
+                        android:thumbTint="@color/red" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:layout_marginTop="5dp">
+                    android:paddingStart="20dp">
 
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:text="@string/green"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/green" />
 
                     <SeekBar
                         android:id="@+id/bg_color_green"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#2ecc71"
-                        android:maxHeight="10dp"/>
+                        android:maxHeight="10dp"
+                        android:thumb="@drawable/custom_thumb_for_color_seekbar"
+                        android:thumbTint="@color/green" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:layout_marginTop="5dp">
+                    android:paddingStart="20dp">
 
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:text="@string/blue"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/blue" />
 
                     <SeekBar
                         android:id="@+id/bg_color_blue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#3498db"
-                        android:maxHeight="10dp"/>
+                        android:maxHeight="10dp"
+                        android:thumb="@drawable/custom_thumb_for_color_seekbar"
+                        android:thumbTint="@color/blue" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -126,7 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="sans-serif-condensed"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/text_color"
@@ -150,59 +149,59 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:text="@string/red"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/red" />
 
                     <SeekBar
                         android:id="@+id/text_color_red"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#e74c3c"
-                        android:maxHeight="10dp" />
+                        android:maxHeight="10dp"
+                        android:thumb="@drawable/custom_thumb_for_color_seekbar"
+                        android:thumbTint="@color/red" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:text="@string/green"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/green" />
 
                     <SeekBar
                         android:id="@+id/text_color_green"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#2ecc71"
-                        android:maxHeight="10dp" />
+                        android:maxHeight="10dp"
+                        android:thumb="@drawable/custom_thumb_for_color_seekbar"
+                        android:thumbTint="@color/green" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:text="@string/blue"
-                        android:textColor="@color/colorAccent" />
+                        android:textColor="@color/blue" />
 
                     <SeekBar
                         android:id="@+id/text_color_blue"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:thumb="@drawable/scrubber_control_normal_holo"
-                        android:thumbTint="#3498db"
-                        android:maxHeight="10dp" />
+                        android:maxHeight="10dp"
+                        android:thumb="@drawable/custom_thumb_for_color_seekbar"
+                        android:thumbTint="@color/blue" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -210,7 +209,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="sans-serif-condensed"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/text_family"
@@ -230,7 +229,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="sans-serif-condensed"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/text_alignment"
@@ -275,7 +274,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="sans-serif-condensed"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/maintext"
@@ -288,7 +287,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:backgroundTint="@color/transparent"
                 android:hint="@string/middletexthint"
                 android:inputType="textMultiLine"
                 android:textSize="16sp" />
@@ -297,7 +295,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:fontFamily="sans-serif"
+                android:fontFamily="sans-serif-condensed"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:text="@string/bottomtext"
@@ -310,7 +308,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:backgroundTint="@color/transparent"
                 android:hint="@string/bottomtexthint"
                 android:inputType="text"
                 android:textSize="16sp" />
